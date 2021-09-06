@@ -23,7 +23,6 @@ class MainClass(QtWidgets.QMainWindow):
         self.dial_set_point.setRange(25,60)
         self.set_point = 25
         self.lcd_set_point.display(25)
-        #self.dial_set_point.valueChanged.connect(lambda: self.lcd_set_point.display(self.dial_set_point.value()))
         self.dial_set_point.valueChanged.connect(self.update_display)
         self.btn_start.clicked.connect(self.update_reference)
 
